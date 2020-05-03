@@ -47,7 +47,7 @@ These are the steps that I took to implement this project.
 		```
 	5. Run the following command to confirm successful download/installation:
 		` dotnet --info `
-	6. Add the above *export* commands (from step 2.4) to your ~/.bash_profile or ~/.bashrc file to make the *dotnet* command available to all future console sessions.
+	6. Add the above *export* commands (from step 2.iv) to your ~/.bash_profile or ~/.bashrc file to make the *dotnet* command available to all future console sessions.
 
 ## Resources
 See the below resources for tutorials and guidance on building .NET applications for your Raspberry Pi.
