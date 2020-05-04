@@ -33,7 +33,7 @@ These are the steps that I took to implement this project.
 		- [.NET Core 3.1 Downloads](https://dotnet.microsoft.com/download/dotnet-core/3.1) - I downloaded/installed the 3.1.201 SDK ARM32 Binaries for Linux on my Raspberry Pi (the next link).
 		- [.NET Core 3.1 SDK - Linux ARM 32 Binaries](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.201-linux-arm32-binaries) - This is exactly what I downloaded.
 		- **Quick Note:** Edi Wang's blog suggests that you should download/install both the .NET Core 3.1 SDK **and** the ASP.NET Core 3.1 Runtime, **but** I do not believe that is necessary. The .NET Core 3.1 SDK claims to include the ASP.NET CORE Runtime 3.1.3, so the SDK is all that you should need.
-	2. Transfer the downloaded binaries (tar.gz file) to your Raspberry pi
+	2. Transfer the downloaded binaries (tar.gz file) to your Raspberry pi (if you didn't download them directly to the Pi itself)
 	3. Using the console on your Raspberry Pi, navigate to the directory where your dotnet-sdk-3.1.xxx-linux-arm.tar.gz file is located and unzip/install the binaries:
 		```
 		mkdir dotnet-arm32
@@ -48,8 +48,12 @@ These are the steps that I took to implement this project.
 	5. Run the following command to confirm successful download/installation:
 		` dotnet --info `
 	6. Add the above *export* commands (from step 2.iv) to your ~/.bash_profile or ~/.bashrc file to make the *dotnet* command available to all future console sessions.
+3. Install the [.NET Core IoT Libraries](https://github.com/dotnet/iot): These libraries allow .NET to interact with the Raspberry Pi hardware (GPIO, sensors, input/output, etc.). The libraries are still very experimental (alpha stage) at this time.
 
 ## Resources
 See the below resources for tutorials and guidance on building .NET applications for your Raspberry Pi.
 
 - [Setup .NET Core 3.0 Runtime and SDK on Raspberry Pi 4](https://edi.wang/post/2019/9/29/setup-net-core-30-runtime-and-sdk-on-raspberry-pi-4)
+- [IoT 101: IoT with .NET Core (and Raspberry Pi)](https://channel9.msdn.com/Series/IoT-101) - These videos walk through creating a blinking light!
+- [Sample .NET Core IoT Scenarios (with a Raspberry Pi)](https://github.com/dotnet/iot/blob/master/samples/README.md)
+	- [Blink an LED with .NET Core on a Raspberry Pi](https://github.com/dotnet/iot/blob/master/samples/led-blink/README.md)
