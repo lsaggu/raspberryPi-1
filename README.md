@@ -57,3 +57,5 @@ See the below resources for tutorials and guidance on building .NET applications
 - [IoT 101: IoT with .NET Core (and Raspberry Pi)](https://channel9.msdn.com/Series/IoT-101) - These videos walk through creating a blinking light!
 - [Sample .NET Core IoT Scenarios (with a Raspberry Pi)](https://github.com/dotnet/iot/blob/master/samples/README.md)
 	- [Blink an LED with .NET Core on a Raspberry Pi](https://github.com/dotnet/iot/blob/master/samples/led-blink/README.md)
+	
+- [Using IoT on a Beer Kegerator](https://www.concurrency.com/blog/april-2018/using-iot-on-a-beer-kegerator)
