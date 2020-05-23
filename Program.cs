@@ -10,13 +10,13 @@ namespace ConsoleApp1
         static void Main(string[] args)
         {
             //vars
-            int pin = 18;
+            int pin = 17;
             int onTime = 1000; //time light will remain on in milliseconds
-            int offTime = 200; //time light will be off in milliseconds
+            int offTime = 1000; //time light will be off in milliseconds
 
             //initialize GPIO controller
             GpioController rPiController = new GpioController();
-            rPiController.OpenPin(pin);
+            rPiController.OpenPin(pin, PinMode.Output);
 
             Console.WriteLine("Hello World!");
 
@@ -24,8 +24,10 @@ namespace ConsoleApp1
             {
                 rPiController.Write(pin, PinValue.High); //turn on the light
                 Thread.Sleep(onTime); //wait
+                Console.WriteLine("On");
                 rPiController.Write(pin, PinValue.Low); //turn off the light
                 Thread.Sleep(offTime); //wait
+                Console.WriteLine("Off");
             }
 
         }
