@@ -15,21 +15,28 @@ namespace ConsoleApp1
             int offTime = 1000; //time light will be off in milliseconds
 
             //initialize GPIO controller
-            GpioController rPiController = new GpioController();
-            rPiController.OpenPin(pin, PinMode.Output);
-
-            Console.WriteLine("Hello World!");
-
-            while (true)
+            using (GpioController rPiController = new GpioController())
             {
-                rPiController.Write(pin, PinValue.High); //turn on the light
-                Thread.Sleep(onTime); //wait
-                Console.WriteLine("On");
-                rPiController.Write(pin, PinValue.Low); //turn off the light
-                Thread.Sleep(offTime); //wait
-                Console.WriteLine("Off");
-            }
+                rPiController.OpenPin(pin, PinMode.Output);
 
+                Console.WriteLine("Hello World!");
+                Console.WriteLine("Starting blinker...");
+
+                Console.CancelKeyPress += (object sender, ConsoleCancelEventArgs eventArgs) =>
+                {
+                    rPiController.Dispose(); //release the resources being used
+                };
+
+                while (true)
+                {
+                    rPiController.Write(pin, PinValue.High); //turn on the light
+                    Thread.Sleep(onTime); //wait
+                    Console.WriteLine("On");
+                    rPiController.Write(pin, PinValue.Low); //turn off the light
+                    Thread.Sleep(offTime); //wait
+                    Console.WriteLine("Off");
+                }
+            }
         }
     }
 }

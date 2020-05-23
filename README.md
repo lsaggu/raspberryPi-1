@@ -28,7 +28,7 @@ These are the steps that I took to implement this project.
 	5. Boot Raspberry Pi
 	6. Install Operating System - I installed the recommended Raspbian OS
 	7. Explore!
-2. Install .NET CORE (see [Setup.NET Core 3.0 Runtime and SDK on Raspberry Pi 4](https://edi.wang/post/2019/9/29/setup-net-core-30-runtime-and-sdk-on-raspberry-pi-4) by Edi Wang for a detailed walk-through))
+2. Install .NET CORE (see [Setup .NET Core 3.0 Runtime and SDK on Raspberry Pi 4](https://edi.wang/post/2019/9/29/setup-net-core-30-runtime-and-sdk-on-raspberry-pi-4) by Edi Wang for a detailed walk-through))
 	1. Download the Linux ARM32 Binaries (or ARM64 if your Pi's OS supports it - Raspbian only supports ARM32)
 		- [.NET Core 3.1 Downloads](https://dotnet.microsoft.com/download/dotnet-core/3.1) - I downloaded/installed the 3.1.201 SDK ARM32 Binaries for Linux on my Raspberry Pi (the next link).
 		- [.NET Core 3.1 SDK - Linux ARM 32 Binaries](https://dotnet.microsoft.com/download/dotnet-core/thank-you/sdk-3.1.201-linux-arm32-binaries) - This is exactly what I downloaded.
